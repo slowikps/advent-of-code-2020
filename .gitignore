@@ -1,0 +1,21 @@
+*.class
+.gradle
+/build/
+/bin/
+/.settings/
+.project
+.classpath
+.factorypath
+.settings
+.springBeans
+.idea
+build
+out
+.DS_Store
+*.iml
+
+# Package Files
+*.war
+*.ear
+
+*Pawel*
