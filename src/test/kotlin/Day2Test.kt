@@ -36,7 +36,7 @@ class Day2Test {
 
     @Test
     fun `day1 part2 provided input`() {
-        readLines("Day2").filter { Day2.isLineValid2(it) }.size shouldBe 538
+        readLines("Day2").filter { Day2.isLineValid2(it) }.size shouldBe 489
     }
 
 }
