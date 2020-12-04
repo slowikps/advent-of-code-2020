@@ -12,7 +12,6 @@ object Day3 {
                 lines[row][col % length] == '#' -> 1 + internal(col + right, row + down)
                 else -> internal(col + right, row + down)
             }
-
         return internal(0, 0)
     }
 }
