@@ -24,6 +24,7 @@ object Day5 {
 
     fun findMissingSitId(sorted: List<Int>): Int {
         tailrec fun internal(idx: Int): Int {
+            //the seats with IDs +1 and -1 from yours will be in your list
             return if (sorted[idx] - sorted[idx - 1] == 2) sorted[idx] - 1
             else internal(idx + 1)
         }
