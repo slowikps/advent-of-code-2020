@@ -44,6 +44,6 @@ class Day7Test {
 
     @Test
     fun `day7 part2 my input`() {
-        Day7.haveToContain("shiny gold", readLines("Day7")) shouldBe 185
+        Day7.haveToContain("shiny gold", readLines("Day7")) shouldBe 89084
     }
 }

@@ -1,7 +1,6 @@
 package aoc
 
 object Day7 {
-
     //light red bags contain 1 bright white bag, 2 muted yellow bags.
     private val holdsRegex = """[ ]?(\d+) (.+) bag[s]?[\\.]?""".toRegex()
 
@@ -31,7 +30,7 @@ object Day7 {
                         if (bagCapacity.containsKey(it.bagColor)) {
                             //this bag + all inside
                             1 + internal(it.bagColor)
-                        } else 1 //no other bags 
+                        } else 1 //no other bags
             }.sum()
         }
         return internal(color)
