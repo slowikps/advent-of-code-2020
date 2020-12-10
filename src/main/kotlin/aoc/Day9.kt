@@ -2,12 +2,11 @@ package aoc
 
 object Day9 {
 
-
     fun firstInvalid(lines: List<Long>, preamble: Int): Long {
         val previous: LinkedHashSet<Long> = LinkedHashSet(lines.take(preamble))
 
         lines.drop(preamble).forEach {
-            if (sumOfPrevious(it, previous)) {
+            if (isSumOfPrevious(it, previous)) {
                 previous.remove(previous.first())
                 previous += it
             } else {
@@ -30,17 +29,14 @@ object Day9 {
                     previous.removeFirst()
                 }
             } while (sum > number)
-
         }
 
         throw IllegalArgumentException("There are not two numbers that sums up to: $number")
     }
 
-    private fun sumOfPrevious(number: Long, previous: LinkedHashSet<Long>): Boolean =
+    private fun isSumOfPrevious(number: Long, previous: LinkedHashSet<Long>): Boolean =
         previous.any {
             val diff = number - it
             previous.contains(diff) && diff != it
         }
-
-
 }
