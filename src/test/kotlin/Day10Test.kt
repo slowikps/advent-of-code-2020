@@ -145,6 +145,6 @@ class Day10Test {
 
     @Test
     fun `day10 part2 my input`() {
-        Day10.totalNumberOfArrangements(readLines("Day10").map { it.toInt() }) shouldBe 99214346656768
+        Day10.totalNumberOfArrangements(readLines("Day10").map { it.toInt() }) shouldBe 99_214_346_656_768
     }
 }
