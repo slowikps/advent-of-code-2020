@@ -2,6 +2,7 @@ package aoc
 
 import aoc.Day11.Grid.Direction.L
 import aoc.Day11.Grid.Direction.R
+import java.util.concurrent.TimeUnit
 
 object Day11 {
 
@@ -17,8 +18,9 @@ object Day11 {
          * Otherwise, the seat's state does not change.
          */
         fun internal(c: Grid, next: Grid): Grid {
-            println(c.toString())
-            println()
+//            println(c.toString())
+//            System.out.flush()
+//            TimeUnit.MILLISECONDS.sleep(100)
             return if (c == next) c
             else internal(next, next.nextRound())
         }
