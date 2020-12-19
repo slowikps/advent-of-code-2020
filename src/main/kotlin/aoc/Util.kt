@@ -15,4 +15,5 @@ fun <E> List<E>.split(predicate: Predicate<E>): List<List<E>> {
         }
     }
     return result.apply { add(tmp) }
+
 }
